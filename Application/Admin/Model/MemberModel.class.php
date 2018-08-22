@@ -11,7 +11,7 @@ class MemberModel extends Model{
         array('username','','用户名已存在！',0,'unique',self::MODEL_BOTH), // 在新增的时候验证name字段是否唯一
         array('email','','邮箱已存在！',0,'unique',self::MODEL_BOTH), // 在新增的时候验证name字段是否唯一
         array('staus',array(0,1),'请勿恶意修改字段',3,'in'), // 当值不为空的时候判断是否在一个范围内
-        array('type',array(1,2),'请勿恶意修改字段',3,'in'), // 当值不为空的时候判断是否在一个范围内
+        array('type',array(1,2,3,4),'请勿恶意修改字段',3,'in'), // 当值不为空的时候判断是否在一个范围内
     );
 
     protected $_auto = array(
